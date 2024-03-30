@@ -436,7 +436,7 @@ body > main > section h2{
 
 
 #personality ul{
-    opacity: 0 !important;
+    opacity: 0;
     will-change: opacity;
     transition: all 0.3s ease;
 }
