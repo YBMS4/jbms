@@ -33,47 +33,52 @@ body > header > figure > div{
     transition: all 0.3s ease;
     will-change: transform , scale;
     box-sizing: border-box;
-
-    &::before{
-        content: "";
-        display: block;
-        width: 95%;
-        aspect-ratio: 1;
-        border-radius: 100%;
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("../tools/images/profilePic.jpg");
-        transform: rotate(-45deg);
-        transition: all 0.3s ease;
-        will-change: transform;
-    }
-
-    &:hover{
-        transform: rotate(90deg) scale(1);
-        &::before{
-            transform: rotate(-90deg);
-        }
-    }
-
-    &:active{
-        transform: rotate(90deg) scale(0.9);
-        &::before{
-            transform: rotate(-90deg);
-        }
-    }
 }
+
+body > header > figure > div::before{
+    content: "";
+    display: block;
+    width: 95%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../tools/images/profilePic.jpg");
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+    will-change: transform;
+}
+
+body > header > figure > div:hover{
+    transform: rotate(90deg) scale(1);
+}
+
+body > header > figure > div:hover::before{
+    transform: rotate(-90deg);
+}
+
+body > header > figure > div:active{
+    transform: rotate(90deg) scale(0.9);
+}
+
+body > header > figure > div:active::before{
+    transform: rotate(-90deg);
+}
+
 body > header > figure > figcaption{
     width: inherit;
     text-align: center;
-    h1{
-        background: linear-gradient(to top, var(--tertiary) 60%, var(--background));
-        background-clip: text;
-        font-size: 4rem;
-        b{
-            color: transparent;
-        }
-    }
+}
+
+body > header > figure > figcaption h1{
+    background: linear-gradient(to top, var(--tertiary) 60%, var(--background));
+    background-clip: text;
+    font-size: 4rem;
+}
+
+body > header > figure > figcaption h1 b{
+    color: transparent;
 }
 
 body > header > h2{
@@ -90,10 +95,10 @@ body > header > aside{
     width: 100vw;
     height: 100vh;
     z-index: 3;
+}
 
-    &.show{
-        display: grid;
-    }
+body > header > aside.show{
+    display: grid;
 }
 
 body > header > aside > figure{
@@ -101,12 +106,14 @@ body > header > aside > figure{
     height: 100%;
     display: grid;
     place-items: center;
-    img{
-        height: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
 }
+
+body > header > aside > figure img{
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 body > header > aside > button{
     position: fixed;
     top: 2vh;
@@ -120,37 +127,38 @@ body > header > aside > button{
     box-sizing: border-box;
     will-change: contents, scale, transform;
     cursor: pointer;
-    
-    &::before, &::after{
-        content: "";
-        width: 100%;
-        aspect-ratio: 10;
-        grid-row: 1/2;
-        grid-column: 1/2;
-        
-        background-color: red !important;
-        
-        border-radius: calc(infinity * 1px);
-        will-change: background-color, transform, scale;
-        transition: all 0.3s ease-in-out;
-    }
-    &::after{
-        transform: rotate(45deg);
-    }
-    &::before{
-        transform: rotate(-45deg);
-    }
-
-    &:hover{
-        &::before, &::after{
-            background-color: var(--on_error);
-        }
-    }
-
-    &:active{
-        transform: scale(0.9);
-    }
 }
+
+body > header > aside > button:active{
+    transform: scale(0.9);
+}
+
+body > header > aside > button::before, body > header > aside > button::after{
+    content: "";
+    width: 100%;
+    aspect-ratio: 10;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    
+    background-color: red !important;
+    
+    border-radius: calc(infinity * 1px);
+    will-change: background-color, transform, scale;
+    transition: all 0.3s ease-in-out;
+}
+
+body > header > aside > button::after{
+    transform: rotate(45deg);
+}
+
+body > header > aside > button::before{
+    transform: rotate(-45deg);
+}
+
+body > header > aside > button:hover::before,body > header > aside > button:hover::after{
+    background-color: var(--on_error);
+}
+
 
 /* ------------> Calcule du niveau de la page */
 #scrollProgress{
@@ -196,21 +204,20 @@ body > header > aside > button{
         aspect-ratio: 1;
         display: grid;
         place-items: center;
-    
-        &::before{
-            width: 90%;
-            aspect-ratio: 1;
-            border-radius: 100%;
-        }
     }
 
-    body > header > figure > figcaption{
-        h1{
-            font-size: 1.2rem;
-            b{
-                color: transparent;
-            }
-        }
+    body > header > figure > div::before{
+        width: 90%;
+        aspect-ratio: 1;
+        border-radius: 100%;
+    }
+
+    body > header > figure > figcaption h1{
+        font-size: 1.2rem;
+    }
+
+    body > header > figure > figcaption h1 b{
+        color: transparent;
     }
     
     body > header > h2{
@@ -228,20 +235,21 @@ body > header > aside > button{
         height: 100%;
         display: grid;
         place-items: center;
-        img{
-            height: 100%;
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-        }
     }
+
+    body > header > aside > figure img{
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
     body > header > aside > button{
         position: fixed;
         top: 2vh;
         right: 2vw;
         width: 10vw;
-        aspect-ratio: 1;
-        
+        aspect-ratio: 1;   
     }
 
 }
@@ -277,22 +285,23 @@ body > header > aside > button{
         display: grid;
         place-items: center;
         box-sizing: border-box;
-    
-        &::before{
-            width: 90%;
-            aspect-ratio: 1;
-            border-radius: 100%;
-        }
+    }
+
+    body > header > figure > div::before{
+        width: 90%;
+        aspect-ratio: 1;
+        border-radius: 100%;
     }
 
     body > header > figure > figcaption{
         width: 100%;
-        h1{
-            font-size: 1.5rem;
-            b{
-                color: transparent;
-            }
-        }
+    }
+    body > header > figure > figcaption h1{
+        font-size: 1.5rem;
+    }
+
+    body > header > figure > figcaption h1 b{
+        color: transparent;
     }
     
     body > header > h2{
@@ -310,21 +319,22 @@ body > header > aside > button{
         height: 100%;
         display: grid;
         place-items: center;
-        img{
-            height: 100%;
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain contain;
-            object-position: center center;
-        }
     }
+
+    body > header > aside > figure img{
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain contain;
+        object-position: center center;
+    }
+
     body > header > aside > button{
         position: fixed;
         top: 2vh;
         right: 2vw;
         width: 5vw;
         aspect-ratio: 1;
-        
     }
 }
 /* ---> Les Grands mobiles et tablettes */
@@ -357,21 +367,20 @@ body > header > aside > button{
         aspect-ratio: 1;
         display: grid;
         place-items: center;
-    
-        &::before{
-            width: 90%;
-            aspect-ratio: 1;
-            border-radius: 100%;
-        }
     }
 
-    body > header > figure > figcaption{
-        h1{
-            font-size: 2.4rem;
-            b{
-                color: transparent;
-            }
-        }
+    body > header > figure > div::before{
+        width: 90%;
+        aspect-ratio: 1;
+        border-radius: 100%;
+    }
+
+    body > header > figure > figcaption h1{
+        font-size: 2.4rem;
+    }
+
+    body > header > figure > figcaption h1 b{
+        color: transparent;
     }
     
     body > header > h2{
@@ -389,13 +398,15 @@ body > header > aside > button{
         height: 100%;
         display: grid;
         place-items: center;
-        img{
-            height: 100%;
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-        }
     }
+
+    body > header > aside > figure img{
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
     body > header > aside > button{
         position: fixed;
         top: 2vh;
@@ -419,11 +430,11 @@ body > header > aside > button{
         aspect-ratio: 1;
         display: grid;
         place-items: center;
-    
-        &::before{
-            width: 90%;
-            aspect-ratio: 1;
-            border-radius: 100%;
-        }
+    }
+
+    body > header > figure > div::before{
+        width: 90%;
+        aspect-ratio: 1;
+        border-radius: 100%;
     }
 }

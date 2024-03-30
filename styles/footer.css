@@ -21,27 +21,25 @@ body > footer{
     row-gap: 3vh;
     transition: all 0.3s ease;
     will-change: width;
+}
 
-    h2{
-        padding: 2vh 0vw;
-        width: 20%;
-        justify-self: start;
-        height: max-content;
-        border-bottom: thick solid var(--primary_border);
-        box-sizing: border-box;
-        will-change: width, contents;
-        transition: all 0.3s ease;
-    };
+#references h2{
+    padding: 2vh 0vw;
+    width: 20%;
+    justify-self: start;
+    height: max-content;
+    border-bottom: thick solid var(--primary_border);
+    box-sizing: border-box;
+    will-change: width, contents;
+    transition: all 0.3s ease;
+}
 
-    &.visible{
+#references.visible h2{
+    width: 100%;
+}
 
-        h2{
-            width: 100%;
-        };
-        article{
-            opacity: 1 !important;
-        };
-    };
+#references.visible article{
+    opacity: 1 !important;
 }
 
 #references > article{
@@ -56,27 +54,22 @@ body > footer{
     opacity: 0 !important;
     will-change: opacity, width;
     transition:  all 0.3s ease;
-
-    h3{
-        font-weight: bold;
-    };
-
-    h4{
-        font-weight: bold;
-        padding-inline: 2vw;
-    };
-
-    h5{
-        font-weight: bold;
-        padding-inline: 2vw;
-    };
-
-    span{
-        font-weight: normal;
-    };
-
 }
 
+#references > article h3{
+    font-weight: bold;
+}
+#references > article h4{
+    font-weight: bold;
+    padding-inline: 2vw;
+}
+#references > article h5{
+    font-weight: bold;
+    padding-inline: 2vw;
+}
+#references > article span{
+    font-weight: normal;
+}
 
 
 #contacts{
@@ -86,18 +79,17 @@ body > footer{
     grid-auto-flow: column;
     box-sizing: border-box;
     column-gap: 3vw;
-    
-    svg{
-        width: 2vw;
-        fill: var(--on_primary);
-    };
-
-    &.visible{
-        a{
-            transform: rotate(0deg) scale(1) !important;
-        };
-    };
 }
+
+#contacts svg{
+    width: 2vw;
+    fill: var(--on_primary);
+}
+
+#contacts.visible a{
+    transform: rotate(0deg) scale(1) !important;
+}
+
 #contacts > a{
     display: grid;
     place-items: center;
@@ -145,11 +137,11 @@ body > footer{
     will-change: opacity, color;
     transition: all 0.3s ease;
     font-size: 1rem;
+}
 
-    &:hover{
-        opacity: 1;
-        color: var(--on_primary);
-    }
+#Infos_supplementaire > button:hover{
+    opacity: 1;
+    color: var(--on_primary);
 }
 
 #infos_preview{
@@ -180,41 +172,43 @@ body > footer{
     will-change: opacity, scale, contents;
     transition: all 0.3s ease;
 
-    &::after, &::before{
-        content: "";
-        width: 100%;
-        aspect-ratio: 10;
-        grid-row: 1/2;
-        grid-column: 1/2;
-        background-color: rgb(255, 0, 0);
-        opacity: 0.5;
-        will-change: opacity, scale;
-        transition: all 0.3s ease;
-    }
-    &::after{
-        transform: rotate(45deg);
-    }
-    &::before{
-        transform: rotate(-45deg);
-    }
+}
 
-    &:hover{
-        scale: 1.2;
-        &::after, &::before{
-            opacity: 1;
-        }
-    }
+#infos_preview > button::after, #infos_preview > button::before{
+    content: "";
+    width: 100%;
+    aspect-ratio: 10;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: rgb(255, 0, 0);
+    opacity: 0.5;
+    will-change: opacity, scale;
+    transition: all 0.3s ease;
+}
+
+#infos_preview > button::after{
+    transform: rotate(45deg);
+}
+
+#infos_preview > button::before{
+    transform: rotate(-45deg);
+}
+
+#infos_preview > button:hover{
+    scale: 1.2;
+}
+
+#infos_preview > button:hover::before, #infos_preview > button:hover::after{
+    opacity: 1;
 }
 
 #mention{
     font-size: 2rem;
-
-    b{
-        color: limegreen;
-    }
 }
 
-
+#mention b{
+    color: limegreen;
+}
 
 /* ---> Les petits mobiles */
 @media only screen and (max-width: 500px){
@@ -232,10 +226,11 @@ body > footer{
         width: 80%;
         padding: 2vh 0px;
         row-gap: 3vh;
-        h2{
-            padding: 2vh 0vw;
-            width: 60%;
-        }
+    }
+
+    #references h2{
+        padding: 2vh 0vw;
+        width: 60%;
     }
     
     #references > article{
@@ -243,38 +238,39 @@ body > footer{
         row-gap: 2vh;
         padding-inline: 2vw;
         padding-bottom: 2vh;
-    
-        h3{
-            font-size: 1rem;
-            font-weight: bold;
-        }
-        h4{
-            font-size: 0.6rem;
-            font-weight: bold;
-            
-            padding-inline: 0vw;
-            padding-left: 2vw;
-        }
-        h5{
-            font-size: 0.6rem;
-            font-weight: bold;
+    }
 
-            padding-inline: 0vw;
-            padding-left: 2vw;
-        }
+    #references > article h3{
+        font-size: 1rem;
+        font-weight: bold;
     }
     
-    
+    #references > article h4{
+        font-size: 0.6rem;
+        font-weight: bold;
+        
+        padding-inline: 0vw;
+        padding-left: 2vw;
+    }
+
+    #references > article h5{
+        font-size: 0.6rem;
+        font-weight: bold;
+
+        padding-inline: 0vw;
+        padding-left: 2vw;
+    }
     
     #contacts{
         width: 100%;
         column-gap: 10vw;
-        
-        svg{
-            width: 6vw;
-            fill: var(--on_primary);
-        }
     }
+
+    #contacts svg{
+        width: 6vw;
+        fill: var(--on_primary);
+    }
+
     #contacts > a{
         aspect-ratio: 1;
         border-radius: 50%;
@@ -326,10 +322,11 @@ body > footer{
         width: 80%;
         padding: 2vh 0px;
         row-gap: 3vh;
-        h2{
-            padding: 2vh 0vw;
-            width: 40%;
-        }
+    }
+
+    #references h2{
+        padding: 2vh 0vw;
+        width: 40%;
     }
     
     #references > article{
@@ -337,38 +334,40 @@ body > footer{
         row-gap: 2vh;
         padding-inline: 2vw;
         padding-bottom: 2vh;
-    
-        h3{
-            font-size: 1rem;
-            font-weight: bold;
-        }
-        h4{
-            font-size: 0.8rem;
-            font-weight: bold;
-            
-            padding-inline: 0vw;
-            padding-left: 2vw;
-        }
-        h5{
-            font-size: 0.8rem;
-            font-weight: bold;
-
-            padding-inline: 0vw;
-            padding-left: 2vw;
-        }
     }
     
+    #references > article h3{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #references > article h4{
+        font-size: 0.8rem;
+        font-weight: bold;
+        
+        padding-inline: 0vw;
+        padding-left: 2vw;
+    }
+
+    #references > article h5{
+        font-size: 0.8rem;
+        font-weight: bold;
+
+        padding-inline: 0vw;
+        padding-left: 2vw;
+    }
     
     
     #contacts{
         width: 100%;
         column-gap: 10vw;
-        
-        svg{
-            width: 4vw;
-            fill: var(--on_primary);
-        }
     }
+
+    #contacts svg{
+        width: 4vw;
+        fill: var(--on_primary);
+    }
+
     #contacts > a{
         aspect-ratio: 1;
         border-radius: 50%;
@@ -417,10 +416,11 @@ body > footer{
         width: 80%;
         padding: 2vh 0px;
         row-gap: 3vh;
-        h2{
-            padding: 2vh 0vw;
-            width: 30%;
-        }
+    }
+
+    #references h2{
+        padding: 2vh 0vw;
+        width: 30%;
     }
     
     #references > article{
@@ -428,25 +428,27 @@ body > footer{
         row-gap: 2vh;
         padding-inline: 2vw;
         padding-bottom: 2vh;
-    
-        h3{
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        h4{
-            font-size: 1rem;
-            font-weight: bold;
-            
-            padding-inline: 0vw;
-            padding-left: 2vw;
-        }
-        h5{
-            font-size: 1rem;
-            font-weight: bold;
+    }
 
-            padding-inline: 0vw;
-            padding-left: 2vw;
-        }
+    #references > article h3{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #references > article h4{
+        font-size: 1rem;
+        font-weight: bold;
+        
+        padding-inline: 0vw;
+        padding-left: 2vw;
+    }
+
+    #references > article h5{
+        font-size: 1rem;
+        font-weight: bold;
+
+        padding-inline: 0vw;
+        padding-left: 2vw;
     }
     
     
@@ -454,12 +456,13 @@ body > footer{
     #contacts{
         width: 100%;
         column-gap: 5vw;
-        
-        svg{
-            width: 2.5vw;
-            fill: var(--on_primary);
-        }
     }
+
+    #contacts svg{
+        width: 2.5vw;
+        fill: var(--on_primary);
+    }
+
     #contacts > a{
         aspect-ratio: 1;
         border-radius: 50%;
@@ -514,11 +517,12 @@ body > footer{
     #references{
         padding: 2vh 0px;
         row-gap: 3vh;
-        h2{
-            padding: 2vh 0vw;
-            width: 25%;
-            font-size: 5rem;
-        }
+    }
+
+    #references h2{
+        padding: 2vh 0vw;
+        width: 25%;
+        font-size: 5rem;
     }
     
     #references > article{
@@ -526,24 +530,27 @@ body > footer{
         row-gap: 2vh;
         padding-inline: 2vw;
         padding-bottom: 2vh;
-    
-        h3{
-            font-weight: bold;
-            font-size: 2rem;
-        }
-        h4{
-            font-weight: bold;
-            padding-inline: 2vw;
-            font-size: 1.5rem;
-        }
-        h5{
-            font-weight: bold;
-            padding-inline: 2vw;
-            font-size: 1.5rem;
-        }
-        span{
-            font-weight: normal;
-        }
+    }
+
+    #references > article h3{
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    #references > article h4{
+        font-weight: bold;
+        padding-inline: 2vw;
+        font-size: 1.5rem;
+    }
+
+    #references > article h5{
+        font-weight: bold;
+        padding-inline: 2vw;
+        font-size: 1.5rem;
+    }
+
+    #references > article span{
+        font-weight: normal;
     }
     
     
@@ -551,11 +558,12 @@ body > footer{
     #contacts{
         width: 100%;
         column-gap: 3vw;
-        
-        svg{
-            width: 3vw;
-        }
     }
+
+    #contacts svg{
+        width: 3vw;
+    }
+
     #contacts > a{
         display: grid;
         place-items: center;
