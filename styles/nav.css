@@ -3,7 +3,7 @@ body > nav{
     top: 0px;
     left: 0px;
     z-index: 2;
-    height: 100vh;
+    height: 100dvh;
     width: 40vw;
     display: grid;
     grid-template-rows: max-content max-content auto max-content;
@@ -27,6 +27,13 @@ body > nav{
         section{
             opacity: 0;
         }
+    }
+}
+
+@supports (not (height: 100dvh)) {
+    /* Définir la couleur de texte uniquement si "color: orange" n'est pas pris en charge */
+    nav {
+      height: 100vh; /* Couleur de texte alternative si "color: orange" n'est pas pris en charge */
     }
 }
 
@@ -217,7 +224,6 @@ body > nav > h2{
 /* ---> Les petits mobiles */
 @media only screen and (max-width: 500px){
     body > nav{
-        height: 100vh;
         width: 100%;
         
         &.close{
@@ -335,7 +341,6 @@ body > nav > h2{
 /* ---> Les mobiles moyens */
 @media only screen and (min-width: 501px) and (max-width: 750px){
     body > nav{
-        height: 100vh;
         width: 100%;
         
         &.close{
@@ -453,7 +458,6 @@ body > nav > h2{
 /* ---> Les Grands mobiles et tablettes */
 @media only screen and (min-width: 751px) and (max-width: 1000px){
     body > nav{
-        height: 100vh;
         width: 100%;
         
         &.close{
