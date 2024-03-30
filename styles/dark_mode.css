@@ -1,0 +1,37 @@
+:root{
+
+    /* ------------> Le Background <-------------- */
+    --background: #ffffff;
+    --onBackground: #000000;
+
+    /* ------------> Le Body Background <-------------- */
+    --bodyBackground: rgb(0, 12, 31);
+    --onBodyBackground: #ffffff;
+    --headerBackground: rgba(255, 255, 255, 0.1);
+
+    /* ------------> Le primary <-------------- */
+    --primary: rgb(41, 16, 63);
+    --on_primary: rgb(219, 181, 255);
+    --primary_border: rgb(131, 0, 253);
+
+    /* ------------> Le secondary <-------------- */
+    --secondary: rgb(55, 65, 0);
+    --on_secondary: rgb(255, 249, 131);
+    --secondary_border: rgb(255, 255, 0);
+
+    /* ------------> Le tertiary <-------------- */
+    --tertiary: rgb(186, 233, 255);
+    --on_tertiary: rgb(0, 50, 56); 
+    --tertiary_border: rgb(0, 139, 139);
+
+    /* ------------> Error <-------------- */
+    --error: rgb(62, 9, 9);
+    --on_error: rgb(255, 57, 57);
+    --error_border: rgb(101, 0, 0);
+
+    /* ------------> Success <-------------- */
+    --success: rgb(18, 53, 14);
+    --on_success: rgb(0, 255, 0);
+    --success_border: rgb(0, 255, 0);
+
+}

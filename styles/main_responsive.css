@@ -1,0 +1,1499 @@
+/* ---> Les petits mobiles */
+@media only screen and (max-width: 500px){
+    body > main > section h2{
+        font-size: 1.5rem !important;
+    }
+
+    #about_self{
+        width: 90vw;
+        display: grid;
+        place-items: center;
+        place-self: center;
+        grid-auto-flow: row;
+        padding: 2vh 2vw;
+    
+        &:hover{
+            h2{
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    
+        &.visible{
+            h2{
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    }
+    #about_self > h2{
+        width: 20%;
+        height: max-content;
+        border-right: none;
+        border-bottom: thick solid var(--primary_border);
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+        justify-self: center;
+        transition: all 0.3s ease;
+        will-change: width, border-radius, border-color, border;
+    }
+    
+    #about_self > p{
+        width: 90%;
+        height: 100%;
+        padding: 2vh 2vw;
+        line-height: 120%;
+        font-size: 1rem;
+        opacity: 0;
+    }
+
+    /* ---------------------> EDUCATIONS <--------------------- */
+    #education{
+        display: grid;
+        place-items: center;
+        grid-auto-columns: 100%;
+        overflow: hidden;
+        width: 80vw;
+        box-sizing: border-box;
+    }
+    
+    #education > h2{
+        padding: 2vh 0vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #education > div{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        align-items: start;
+        grid-auto-rows: max-content;
+        grid-auto-flow: row;
+        grid-template-columns: unset;
+        row-gap: 5vh;
+        column-gap: 1vw;
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+    }
+
+    #education > div > article{
+        width: max-content;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: max-content max-content max-content auto;
+        place-items: center;
+        width: 100%;
+        border-radius: 0px 0px 25px 25px;
+        will-change: height, border;
+    
+        &.visible, &:hover{
+            height: 100%;
+            border: thick outset var(--background);
+        }
+    }
+
+    #education > div > article > figure{
+        display: grid;
+        width: 100%;
+        place-items: center;
+        font-size: 1.2rem;
+        
+        background-color: var(--background);
+        aspect-ratio: 2.5;
+        box-sizing: border-box;
+        
+    }
+    
+    #education > div > article > h4{
+        font-size: 1rem;
+        padding: 2vh 2vw;
+        border-radius: 25px;
+        margin-top: 2vh;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    #education > div > article > h5{
+        font-size: 1rem;
+        width: 100%;
+        padding: 2vh 2vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+    }
+    #education > div > article > h6{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        padding: 2vh 0px;
+    }
+
+
+    /* #####################----> Competences <----##################### */
+    #competences{
+        display: grid;
+        place-items: center;
+        width: 80vw;
+        overflow: hidden;
+    }
+
+    #competences > h2{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: max-content max-content;
+        place-items: center;
+        padding: 2vh 0px;
+        width: 100%;
+    }
+
+    #competences > div{
+        width: 100%;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+        grid-template-columns: 100%;
+        place-items: center;
+        padding: 5vh 2vw;
+        column-gap: 2vw;
+        row-gap: 5vh;
+    }
+
+    #competences > div > article{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        align-self: start;
+
+        transform: translate(0vw, 0vh);
+        box-shadow: 0vw 0vh 0px 0px var(--primary_border);
+        border-color: transparent;
+        border-radius: 0px 0px 10px 10px;
+
+        &:nth-of-type(3){
+            grid-column: unset;
+            width: 100%;
+
+            & > ul > li > ul{
+                margin: 1vh 2vw;
+                list-style-position: inside;
+            }
+        }
+
+        &.highlight{
+            transform: translate(0.5vw, -1vh);
+            box-shadow: -0.5vw 1vh 0px 0px var(--primary_border);
+            border-color: var(--primary_border);
+        }
+
+    }
+
+    #competences > div > article > figure{
+        display: grid;
+        grid-auto-flow: row;
+        width: 100%;
+
+        img{
+            width: 100%;
+            aspect-ratio: 2;
+        }
+        figcaption{
+            font-size: 1.2rem;
+            width: 100%;
+            padding: 2vh 0px;
+            box-sizing: border-box;
+        }
+    }
+
+    #competences > div > article > h3{
+        width: 100%;
+        padding: 2vh 1vw;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+    #competences > div > article > ul{
+        width: 100%;
+        padding: 0vh 2vw;
+        padding-bottom: 5vh;
+        font-size: 0.7rem;
+        & > li{
+            padding: 1vh 1vw;
+        }
+    }
+
+    /* ####################------> Experiences <------#################### */
+
+    #experiences{
+        width: 80vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        place-items: center;
+        overflow: hidden;
+
+        h2{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: max-content max-content;
+            place-items: center;
+            padding: 2vh 0px;
+            width: 100%;
+            border-bottom: thick solid var(--primary_border);
+            font-size: 1.3rem !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #experiences > article{
+        display: grid;
+        width: 100%;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        align-self: start;
+
+        h3{
+            font-size: 1rem;
+            border-bottom: thick solid var(--secondary_border);
+            width: auto;
+            height: max-content;
+            padding: 2vh 2vw;
+            word-wrap: break-word;
+        }
+        h4{
+            font-size: 0.8rem;
+            padding: 0px 2vw;
+        }
+        h5{
+            font-size: 0.8rem;
+            padding: 0px 2vw;
+            span{
+                font-family: Times,'Times New Roman' ,serif, Arial, Helvetica, sans-serif;
+            }
+        }
+        h6{
+            font-size: 0.8rem;
+            padding: 0px 2vw;
+        }
+
+        ul{
+            font-size: 0.7rem;
+            list-style-type: disc;
+            list-style-position: inside;
+            box-sizing: border-box;
+            padding: 0px 2vw;
+
+            li{
+                padding: 1vh 2vw;
+            }
+        }
+    }
+
+
+    /* ###############-------> Autres Informations <-------################## */
+    #other_information{
+        width: 80vw;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: unset;
+        column-gap: 2vw;
+        row-gap: 5vh;
+        height: 100%;
+    }
+
+
+    #personality, #langues{
+
+        width: 100%;
+        box-sizing: border-box;
+        align-self: start;
+        
+        h2{
+            padding: 2vh 2vw;
+            width: 100%;
+            height: 100%;
+        }
+
+        ul{
+            width: 100%;
+            height: 100%;
+            font-size: 0.8rem;
+            padding: 2vh 2vw;
+            row-gap: 2vh;
+        }
+    }
+
+    #langues{
+        display: grid;
+        place-items: center;
+        height: max-content;
+
+        & > div{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-rows: auto;
+            place-items: center;
+            padding: 4vh 0px;
+            row-gap: 3vh;
+        }
+    }
+
+    #langues > div > article{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        place-items: center;
+        column-gap: 2vw;
+        padding: 0px 0vw;
+        
+        span{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+        }
+
+        span:nth-of-type(1){
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+        span:nth-of-type(2){
+            font-style: italic;
+            font-size: 0.55rem;
+        }
+
+        div{
+            width: 100%;
+            height: 0.5vh;
+            border-radius: calc(infinity * 1px);
+            display: grid;
+            align-items: center;
+            justify-items: start;
+            background-color: var(--secondary);
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &::before{
+                content: "";
+                height: 100%;
+                background-color: var(--on_secondary);
+                border-radius: calc(infinity * 1px);
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+
+/* ---> Les mobiles moyens */
+@media only screen and (min-width: 501px) and (max-width: 750px){
+    body > main > section h2{
+        font-size: 1.8rem;
+    }
+    #about_self{
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        place-self: center;
+        grid-auto-flow: row;
+        padding: 2vh 2vw;
+    
+        &:hover{
+            h2{
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    
+        &.visible{
+            h2{
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    }
+
+    #about_self > h2{
+        width: 20%;
+        height: max-content;
+        border-right: none;
+        border-bottom: thick solid var(--primary_border);
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+        justify-self: center;
+        transition: all 0.3s ease;
+        will-change: width, border-radius, border-color, border;
+    }
+    
+    #about_self > p{
+        width: 90%;
+        height: 100%;
+        padding: 2vh 2vw;
+        line-height: 120%;
+        font-size: 1rem;
+        opacity: 0;
+    }
+
+    /* ---------------------> EDUCATIONS <--------------------- */
+    #education{
+        display: grid;
+        place-items: center;
+        width: 80vw;
+        box-sizing: border-box;
+    }
+    
+    #education > h2{
+        padding: 2vh 2vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #education > div{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        align-items: start;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        row-gap: 5vh;
+        column-gap: 1vw;
+        padding: 2vh 2vw;
+    }
+
+    #education > div > article{
+        width: max-content;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: max-content max-content max-content auto;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 25px 25px;
+        will-change: height, border;
+    
+        &.visible, &:hover{
+            height: 100%;
+            border: thick outset var(--background);
+        }
+    }
+
+    #education > div > article > figure{
+        display: grid;
+        width: 100%;
+        place-items: center;
+        font-size: 1.8rem;
+        
+        background-color: var(--background);
+        aspect-ratio: 2.5;
+        
+    }
+    
+    #education > div > article > h4{
+        font-size: 1rem;
+        padding: 2vh 3vw;
+        border-radius: 25px;
+        margin-top: 2vh;
+    }
+    #education > div > article > h5{
+        font-size: 1rem;
+        width: 100%;
+        padding: 4vh 2vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 4vh;
+    }
+    #education > div > article > h6{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        padding: 2vh 0px;
+    }
+
+    /* #####################----> Competences <----##################### */
+    #competences{
+        display: grid;
+        place-items: center;
+        width: 80vw;
+        overflow: hidden;
+    }
+
+    #competences > h2{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: max-content max-content;
+        place-items: center;
+        padding: 2vh 0px;
+        width: 100%;
+    }
+
+    #competences > div{
+        width: 100%;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+        grid-template-columns: 100%;
+        place-items: center;
+        padding: 5vh 2vw;
+        column-gap: 2vw;
+        row-gap: 5vh;
+    }
+
+    #competences > div > article{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        align-self: start;
+
+        transform: translate(0vw, 0vh);
+        box-shadow: 0vw 0vh 0px 0px var(--primary_border);
+        border-color: transparent;
+        border-radius: 0px 0px 10px 10px;
+
+        &:nth-of-type(3){
+            grid-column: unset;
+            width: 100%;
+
+            & > ul > li > ul{
+                margin: 1vh 2vw;
+                list-style-position: inside;
+            }
+        }
+
+        &.highlight{
+            transform: translate(0.5vw, -1vh);
+            box-shadow: -0.5vw 1vh 0px 0px var(--primary_border);
+            border-color: var(--primary_border);
+        }
+
+    }
+
+    #competences > div > article > figure{
+        display: grid;
+        grid-auto-flow: row;
+        width: 100%;
+
+        img{
+            width: 100%;
+            aspect-ratio: 2;
+        }
+        figcaption{
+            font-size: 1.2rem;
+            width: 100%;
+            padding: 2vh 0px;
+            box-sizing: border-box;
+        }
+    }
+
+    #competences > div > article > h3{
+        width: 100%;
+        padding: 2vh 1vw;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+    #competences > div > article > ul{
+        width: 100%;
+        padding: 0vh 2vw;
+        padding-bottom: 5vh;
+        font-size: 0.8rem;
+        & > li{
+            padding: 1vh 1vw;
+        }
+    }
+
+    /* ####################------> Experiences <------#################### */
+
+    #experiences{
+        width: 80vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        place-items: center;
+        overflow: hidden;
+
+        h2{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: max-content max-content;
+            place-items: center;
+            padding: 2vh 0px;
+            width: 100%;
+            border-bottom: thick solid var(--primary_border);
+            font-size: 1.3rem !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #experiences > article{
+        display: grid;
+        width: 100%;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        align-self: start;
+
+        h3{
+            font-size: 1.2rem;
+            border-bottom: thick solid var(--secondary_border);
+            width: auto;
+            height: max-content;
+            padding: 2vh 2vw;
+            word-wrap: break-word;
+        }
+        h4{
+            font-size: 1.1rem;
+            padding: 0px 2vw;
+        }
+        h5{
+            font-size: 1rem;
+            padding: 0px 2vw;
+        }
+        h6{
+            font-size: 1rem;
+            padding: 0px 2vw;
+        }
+
+        ul{
+            font-size: 0.8rem;
+            box-sizing: border-box;
+            padding: 0px 2vw;
+
+            li{
+                padding: 1vh 2vw;
+            }
+        }
+    }
+
+    /* ###############-------> Autres Informations <-------################## */
+    #other_information{
+        width: 80vw;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: unset;
+        column-gap: 2vw;
+        row-gap: 5vh;
+        height: 100%;
+    }
+
+
+    #personality, #langues{
+
+        width: 100%;
+        box-sizing: border-box;
+        align-self: start;
+        
+        h2{
+            padding: 2vh 2vw;
+            width: 100%;
+            height: 100%;
+        }
+
+        ul{
+            width: 100%;
+            height: 100%;
+            font-size: 1rem;
+            padding: 2vh 2vw;
+            row-gap: 2vh;
+        }
+    }
+
+    #langues{
+        display: grid;
+        place-items: center;
+        height: max-content;
+
+        & > div{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-rows: auto;
+            place-items: center;
+            padding: 4vh 0px;
+            row-gap: 3vh;
+        }
+    }
+
+    #langues > div > article{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        place-items: center;
+        column-gap: 2vw;
+        padding: 0px 0vw;
+        
+        span{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+        }
+
+        span:nth-of-type(1){
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        span:nth-of-type(2){
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        div{
+            width: 100%;
+            height: 0.7vh;
+            border-radius: calc(infinity * 1px);
+            display: grid;
+            align-items: center;
+            justify-items: start;
+            background-color: var(--secondary);
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &::before{
+                content: "";
+                height: 100%;
+                background-color: var(--on_secondary);
+                border-radius: calc(infinity * 1px);
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+/* ---> Les Grands mobiles et tablettes */
+@media only screen and (min-width: 751px) and (max-width: 1000px){
+    body > main > section h2{
+        font-size: 2rem;
+    }
+
+    #about_self{
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        place-self: center;
+        grid-auto-flow: row;
+        padding: 2vh 2vw;
+    
+        &:hover{
+            h2{
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    
+        &.visible{
+            h2{
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    }
+    #about_self > h2{
+        width: 20%;
+        height: max-content;
+        border-right: none;
+        border-bottom: thick solid var(--primary_border);
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+        justify-self: start;
+        transition: all 0.3s ease;
+        will-change: width, border-radius, border-color, border;
+    }
+    
+    #about_self > p{
+        width: 90%;
+        height: 100%;
+        padding: 2vh 2vw;
+        line-height: 120%;
+        font-size: 1rem;
+        opacity: 0;
+    }
+
+    /* ---------------------> EDUCATIONS <--------------------- */
+    #education{
+        display: grid;
+        place-items: center;
+        width: 80vw;
+        box-sizing: border-box;
+    }
+    
+    #education > h2{
+        padding: 2vh 2vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #education > div{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        align-items: start;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        row-gap: 5vh;
+        column-gap: 1vw;
+        padding: 2vh 2vw;
+    }
+
+    #education > div > article{
+        width: max-content;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: max-content max-content max-content auto;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 25px 25px;
+        will-change: height, border;
+    
+        &.visible, &:hover{
+            height: 100%;
+            border: thick outset var(--background);
+        }
+    }
+
+    #education > div > article > figure{
+        display: grid;
+        width: 100%;
+        place-items: center;
+        font-size: 1.5rem;
+        
+        background-color: var(--background);
+        aspect-ratio: 2.5;
+        
+    }
+    
+    #education > div > article > h4{
+        font-size: 1rem;
+        padding: 2vh 3vw;
+        border-radius: 25px;
+        margin-top: 2vh;
+    }
+    #education > div > article > h5{
+        font-size: 1rem;
+        width: 100%;
+        padding: 4vh 2vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 4vh;
+    }
+    #education > div > article > h6{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        padding: 2vh 0px;
+    }
+
+    /* #####################----> Competences <----##################### */
+    #competences{
+        display: grid;
+        place-items: center;
+        width: 80vw;
+        overflow: hidden;
+    }
+
+    #competences > h2{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: max-content max-content;
+        place-items: center;
+        padding: 2vh 0px;
+        width: 100%;
+    }
+
+    #competences > div{
+        width: 100%;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+        grid-template-columns: 100%;
+        place-items: center;
+        padding: 5vh 2vw;
+        column-gap: 2vw;
+        row-gap: 5vh;
+    }
+
+    #competences > div > article{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        align-self: start;
+
+        transform: translate(0vw, 0vh);
+        box-shadow: 0vw 0vh 0px 0px var(--primary_border);
+        border-color: transparent;
+        border-radius: 0px 0px 10px 10px;
+
+        &:nth-of-type(3){
+            grid-column: unset;
+            width: 100%;
+
+            & > ul > li > ul{
+                margin: 1vh 2vw;
+                list-style-position: inside;
+            }
+        }
+
+        &.highlight{
+            transform: translate(0.5vw, -1vh);
+            box-shadow: -0.5vw 1vh 0px 0px var(--primary_border);
+            border-color: var(--primary_border);
+        }
+
+    }
+
+    #competences > div > article > figure{
+        display: grid;
+        grid-auto-flow: row;
+        width: 100%;
+
+        img{
+            width: 100%;
+            aspect-ratio: 2.5;
+        }
+        figcaption{
+            font-size: 1.5rem;
+            width: 100%;
+            padding: 2vh 0px;
+            box-sizing: border-box;
+        }
+    }
+
+    #competences > div > article > h3{
+        width: 100%;
+        padding: 2vh 1vw;
+        box-sizing: border-box;
+        font-size: 1.2rem;
+    }
+    #competences > div > article > ul{
+        width: 100%;
+        padding: 0vh 2vw;
+        padding-bottom: 5vh;
+        font-size: 1rem;
+        & > li{
+            padding: 1vh 1vw;
+        }
+    }
+
+    /* ####################------> Experiences <------#################### */
+
+    #experiences{
+        width: 80vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        place-items: center;
+        overflow: hidden;
+
+        h2{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: max-content max-content;
+            place-items: center;
+            padding: 2vh 0px;
+            width: 100%;
+            border-bottom: thick solid var(--primary_border);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #experiences > article{
+        display: grid;
+        width: 100%;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        align-self: start;
+
+        h3{
+            font-size: 1.2rem;
+            border-bottom: thick solid var(--secondary_border);
+            width: auto;
+            height: max-content;
+            padding: 2vh 2vw;
+            word-wrap: break-word;
+        }
+        h4{
+            font-size: 1.1rem;
+            padding: 0px 2vw;
+        }
+        h5{
+            font-size: 1rem;
+            padding: 0px 2vw;
+        }
+        h6{
+            font-size: 1rem;
+            padding: 0px 2vw;
+        }
+
+        ul{
+            font-size: 0.8rem;
+            box-sizing: border-box;
+            padding: 0px 2vw;
+
+            li{
+                padding: 1vh 2vw;
+            }
+        }
+    }
+
+    /* ###############-------> Autres Informations <-------################## */
+    #other_information{
+        width: 80vw;
+        display: grid;
+        column-gap: 3vw;
+        row-gap: 5vh;
+        height: 100%;
+    }
+
+
+    #personality, #langues{
+
+        width: 100%;
+        box-sizing: border-box;
+        align-self: start;
+        
+        h2{
+            padding: 2vh 2vw;
+            width: 100%;
+            height: 100%;
+        }
+
+        ul{
+            width: 100%;
+            height: 100%;
+            font-size: 0.8rem;
+            padding: 2vh 2vw;
+            row-gap: 2vh;
+        }
+    }
+
+    #langues{
+        display: grid;
+        place-items: center;
+        height: max-content;
+
+        & > div{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-rows: auto;
+            place-items: center;
+            padding: 4vh 0px;
+            row-gap: 3vh;
+        }
+    }
+
+    #langues > div > article{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        place-items: center;
+        column-gap: 1vw;
+        padding: 0px 0vw;
+        box-sizing: border-box;
+        
+        span{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            box-sizing: border-box;
+        }
+
+        span:nth-of-type(1){
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        span:nth-of-type(2){
+            font-style: italic;
+            font-size: 0.5rem;
+        }
+
+        div{
+            width: 100%;
+            height: 0.8vh;
+            border-radius: calc(infinity * 1px);
+            display: grid;
+            align-items: center;
+            justify-items: start;
+            background-color: var(--secondary);
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &::before{
+                content: "";
+                height: 100%;
+                background-color: var(--on_secondary);
+                border-radius: calc(infinity * 1px);
+                box-sizing: border-box;
+            }
+        }
+    }
+
+}
+/* ---> Pour les appareils mobiles */
+@media only screen and (max-width: 1000px){}
+
+/* ---------> Les Ordinateurs (par default) */
+/* @media only screen and (min-width: 1001px) and (max-width: 1999px){} */
+
+/* ---------> ecran large (4k, 8k) */
+@media only screen and (min-width: 2000px){
+    body > main > section h2{
+        font-size: 5rem;
+    }
+
+    #about_self{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        grid-auto-flow: column;
+        padding: 2vh 2vw;
+    
+        &:hover{
+            h2{
+                height: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    
+        &.visible{
+            h2{
+                height: 100%;
+            }
+            p{
+                opacity: 1;
+            }
+        }
+    }
+    #about_self > h2{
+        height: 40%;
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        will-change: width, border-radius, border-color, border, height;
+    }
+    
+    #about_self > p{
+        width: 90%;
+        height: 100%;
+        padding: 2vh 2vw;
+        line-height: 120%;
+        font-size: 3rem;
+        opacity: 0;
+    }
+
+
+    /* ---------------------> EDUCATIONS <--------------------- */
+    #education{
+        display: grid;
+        place-items: center;
+        width: 80vw;
+        box-sizing: border-box;
+    }
+    
+    #education > h2{
+        padding: 2vh 2vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #education > div{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        align-items: start;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 5vh;
+        column-gap: 1vw;
+        padding: 2vh 2vw;
+    }
+
+    #education > div > article{
+        width: max-content;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: max-content max-content max-content auto;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 50px 50px;
+        will-change: height, border;
+    
+        &.visible, &:hover{
+            height: 100%;
+            border: thick outset var(--background);
+        }
+    }
+
+    #education > div > article > figure{
+        display: grid;
+        width: 100%;
+        place-items: center;
+        font-size: 4rem;
+        
+        background-color: var(--background);
+        aspect-ratio: 2.5;
+        
+    }
+    
+    #education > div > article > h4{
+        font-size: 2.2rem;
+        padding: 2vh 3vw;
+        border-radius: 50px;
+        margin-top: 2vh;
+    }
+    #education > div > article > h5{
+        font-size: 2.2rem;
+        width: 100%;
+        padding: 4vh 2vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 4vh;
+    }
+    #education > div > article > h6{
+        font-size: 2.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 2vh 0px;
+    }
+
+
+    /* #####################----> Competences <----##################### */
+    
+
+    #competences > div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        place-items: center;
+        padding: 5vh 2vw;
+        box-sizing: border-box;
+        column-gap: 2vw;
+        row-gap: 6vh;
+    }
+    #competences > div > article{
+        width: 100%;
+        height: 100%;
+        
+        transform: translate(0vw, 0vh);
+        box-shadow: 0vw 0vh 0px 0px var(--primary_border);
+        border-color: transparent;
+        border-radius: 0px 0px 20px 20px;
+
+        &:nth-of-type(3){
+
+            & > ul > li > ul{
+                margin: 1vh 2vw;
+            }
+        }
+
+        &.highlight{
+            transform: translate(1vw, -2vh);
+            box-shadow: -1vw 2vh 0px 0px var(--primary_border);
+            border-color: var(--primary_border);
+        }
+
+    }
+
+    #competences > div > article > figure{
+        display: grid;
+        grid-auto-flow: row;
+        width: 100%;
+
+        img{
+            width: 100%;
+            aspect-ratio: 2;
+        }
+        figcaption{
+            font-size: 2.5rem;
+            width: 100%;
+            padding: 2vh 0px;
+        }
+    }
+    #competences > div > article > h3{
+        width: 100%;
+        padding: 2vh 1vw;
+        font-size: 2rem;
+    }
+    #competences > div > article > ul{
+        width: 100%;
+        padding: 0vh 2vw;
+        padding-bottom: 5vh;
+        font-size: 1.8rem;
+        & > li{
+            padding: 1vh 1vw;
+        }
+    }
+
+    /* ####################------> Experiences <------#################### */
+
+    #experiences{
+        width: 80vw;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        place-items: center;
+
+        h2{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: max-content max-content;
+            place-items: center;
+            padding: 2vh 0px;
+            width: 100%;
+            border-bottom: thick solid var(--primary_border);
+            transition: all 0.3s ease;
+        }
+    }
+
+    #experiences > article{
+        display: grid;
+        width: 100%;
+        grid-auto-flow: row;
+        row-gap: 2vh;
+        box-sizing: border-box;
+        align-self: start;
+
+        h3{
+            font-size: 2.5rem;
+            border-bottom: thick solid var(--secondary_border);
+            width: max-content;
+            padding: 2vh 2vw;
+        }
+        h4{
+            font-size: 2rem;
+            padding: 0px 2vw;
+        }
+        h5{
+            font-size: 2rem;
+            padding: 0px 2vw;
+        }
+        h6{
+            font-size: 2rem;
+            padding: 0px 2vw;
+        }
+
+        ul{
+            font-size: 1.8rem;
+            list-style-type: disc;
+            list-style-position: inside;
+            box-sizing: border-box;
+            padding: 0px 2vw;
+
+            li{
+                padding: 1vh 2vw;
+            }
+        }
+    }
+
+    /* ###############-------> Autres Informations <-------################## */
+    #other_information{
+        width: 80vw;
+        column-gap: 4vw;
+        height: 100%;
+    }
+
+
+    #personality, #langues{
+        width: 100%;
+        
+        h2{
+            padding: 2vh 2vw;
+            width: 100%;    
+        }
+
+        ul{
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            padding: 2vh 4vw;
+            row-gap: 2vh;
+        }
+    }
+
+    #langues{
+        
+        & > div{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding: 4vh 0px;
+            row-gap: 3vh;
+        }
+    }
+
+    #langues > div > article{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+        column-gap: 1vw;
+        padding: 0px 2vw;
+        
+        span{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        span:nth-of-type(1){
+            font-size: 2rem;
+        }
+        span:nth-of-type(2){
+            font-size: 1.5rem;
+        }
+
+        div{
+            width: 100%;
+            height: 1vh;
+            
+            &::before{
+                height: 100%;
+            }
+        }
+    }
+
+}

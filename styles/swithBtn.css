@@ -1,0 +1,69 @@
+#switch{
+    padding: 0;
+    margin: 0;
+
+    width: 4vw;
+    height: max-content;
+    border: thin solid black;
+    background-color: white;
+    cursor: pointer;
+    border-radius: calc(infinity * 1px);
+    will-change: contents, background-color, border, border-color;
+    transition: all 0.3s linear;
+
+    &::before{
+        content: "";
+        display: block;
+        width: 50%;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        transition: all 0.3s linear;
+
+        will-change: margin-left, background-color;
+    }
+
+    &.switched{
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        border-color: rgb(0, 128, 255);
+        
+        &::before{
+            margin-left: 50%;
+            background-color: rgb(0, 128, 255);
+        }
+
+    }
+}
+
+/* ---> Les petits mobiles */
+@media only screen and (max-width: 500px){
+    #switch{
+        width: 10vw;
+    }
+}
+/* ---> Les mobiles moyens */
+@media only screen and (min-width: 501px) and (max-width: 750px){
+    #switch{
+        width: 6vw;
+    }
+}
+/* ---> Les Grands mobiles et tablettes */
+@media only screen and (min-width: 751px) and (max-width: 1000px){
+    #switch{
+        width: 6vw;
+    }
+}
+/* ---> Pour les appareils mobiles */
+@media only screen and (max-width: 1000px){}
+
+/* ---------> Les Ordinateurs (par default) */
+/* @media only screen and (min-width: 1001px) and (max-width: 1999px){} */
+
+/* ---------> ecran large (4k, 8k) */
+@media only screen and (min-width: 2000px){
+    #switch{
+        width: 4vw;
+    }
+}

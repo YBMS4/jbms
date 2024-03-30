@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
+    <linearGradient id="BorderGradiant" x1="0%" x2="0%" y1="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#0000ff;" />
+        <stop offset="50%" style="stop-color: #000080;" />
+        <stop offset="100%" style="stop-color:#8a2be2;" />
+    </linearGradient>
+
+    <circle cx="50" cy="50" r="40" stroke="#0000a0" strock-width="4" fill="url(#BorderGradiant)"/>
+    <text font-size="70" font-family="Arial, Helvetica, sans-serif"  >
+        <tspan x="27" y="75" fill="#ffffff" stroke="#0000a0" stroke-width="0.5">J</tspan>
+    </text>
+</svg>

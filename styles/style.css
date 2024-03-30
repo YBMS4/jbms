@@ -1,0 +1,111 @@
+@import url("header.css");
+@import url("nav.css");
+@import url("main.css");
+@import url("main_responsive.css");
+@import url("footer.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    scroll-snap-align: top;
+}
+
+::-webkit-scrollbar{
+    width: 0.5vw;
+    height: 1vh;
+    background: var(--on_tertiary);
+    transition: all 0.3s linear;
+    will-change: background, background-color, border-radius;
+}
+
+/* Ceci est la bar utiliser pour se deplacer */
+::-webkit-scrollbar-thumb{
+    background: var(--tertiary);
+    border-radius: 50px;
+    transition: all 0.3s linear;
+    will-change: background, background-color, border-radius;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--background);
+    transition: all 0.3s linear;
+    will-change: background, background-color, border-radius;
+}
+
+body{
+    background-color: var(--bodyBackground);
+    color: var(--onBodyBackground);
+    will-change: background-color, color;
+    transition: all 0.3s linear;
+}
+
+#loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--bodyBackground);
+    color: var(--onBodyBackground);
+    font-size: 10vw;
+    will-change: contents, opacity, display;
+    transition: all 0.3s linear;
+}
+
+#loading > article{
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &::before{
+        content: "";
+        display: block;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border: thick solid var(--primary_border);
+        border-color: var(--primary_border) transparent var(--primary_border) var(--primary_border);
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        animation: rotation 1s ease-out infinite;
+    }
+
+    div{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        display: grid;
+        grid-auto-flow: column;
+        place-items: center;
+        background-image: linear-gradient(to bottom, var(--onBodyBackground), var(--primary_border));
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes rotation {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+/* ---> Les petits mobiles */
+@media only screen and (max-width: 500px){}
+/* ---> Les mobiles moyens */
+@media only screen and (min-width: 501px) and (max-width: 750px){}
+/* ---> Les Grands mobiles et tablettes */
+@media only screen and (min-width: 751px) and (max-width: 1000px){}
+/* ---> Pour les appareils mobiles */
+@media only screen and (max-width: 1000px){}
+
+/* ---------> Les Ordinateurs (par default) */
+/* @media only screen and (min-width: 1001px) and (max-width: 1999px){} */
+
+/* ---------> ecran large (4k, 8k) */
+@media only screen and (min-width: 2000px){}
