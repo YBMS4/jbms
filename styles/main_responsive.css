@@ -114,7 +114,7 @@
     #education > div > article > h4{
         font-size: 1rem;
         padding: 2vh 2vw;
-        border-radius: 25px;
+        border-radius: 0px !important;
         margin-top: 2vh;
         box-sizing: border-box;
         width: 100%;
@@ -513,8 +513,10 @@
     #education > div > article > h4{
         font-size: 1rem;
         padding: 2vh 3vw;
-        border-radius: 25px;
+        border-radius: 0px !important;
         margin-top: 2vh;
+        width: 100% !important;
+        text-align: center !important;
     }
     #education > div > article > h5{
         font-size: 1rem;

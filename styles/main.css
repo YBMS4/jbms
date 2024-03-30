@@ -86,7 +86,7 @@ body > main > section h2{
     align-items: start;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     row-gap: 2vh;
-    column-gap: 1vw;
+    column-gap: 2vw;
     padding: 2vh 2vw;
     box-sizing: border-box;
 }
@@ -99,17 +99,20 @@ body > main > section h2{
     width: 100%;
     height: 0% !important;
     box-sizing: border-box;
-    border: thick outset transparent;
+    border: thin outset transparent;
     border-radius: 0px 0px 25px 25px;
     overflow: hidden;
     transition: all 0.3s ease;
-    will-change: height, border;
+    will-change: height, border, opacity;
+    opacity: 0 !important;
 
     &.visible, &:hover{
+        opacity: 1 !important;
         height: 100% !important;
-        border: thick outset var(--background) !important;
+        border: thin solid var(--background) !important;
     }
 }
+
 #education > div > article > figure{
     display: grid;
     width: 100%;
@@ -203,12 +206,13 @@ body > main > section h2{
 #competences > div > article{
     overflow: hidden;
     width: 100%;
-    height: 0% !important;
+    height: 100% !important;
     border-radius: 0px;
-    will-change: box-shadow, height, width, border, background-color, background-image, transform, scale;
+    will-change: box-shadow, height, width, border, background-color, background-image, transform, scale, opacity;
     border: thin groove transparent;
     transition: all 0.5s ease;
     align-self: start;
+    opacity: 0 !important;
 
     transform: translate(0vw, 0vh);
     box-shadow: 0vw 0vh 0px 0px var(--primary_border);
@@ -236,7 +240,7 @@ body > main > section h2{
     }
 
     &.visible{
-        height: 100% !important;
+        opacity: 1 !important;
     }
 
 }
