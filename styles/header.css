@@ -24,8 +24,8 @@ body > header > figure > div{
     aspect-ratio: 1;
     width: 30vw;
     border-radius: 50%;
-    border: thick ridge transparent;
-    border-color: var(--on_primary) transparent var(--on_primary) transparent;
+    border: thick solid transparent !important;
+    border-color: var(--on_primary) transparent var(--on_primary) transparent !important;
     transform: rotate(45deg);
     display: grid;
     place-items: center;
@@ -127,7 +127,9 @@ body > header > aside > button{
         aspect-ratio: 10;
         grid-row: 1/2;
         grid-column: 1/2;
-        background-color: var(--background);
+        
+        background-color: red !important;
+        
         border-radius: calc(infinity * 1px);
         will-change: background-color, transform, scale;
         transition: all 0.3s ease-in-out;

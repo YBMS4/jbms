@@ -18,7 +18,8 @@ body > nav{
         padding: 1vh 1vw;
         button{
             div{
-                background-color: var(--background);
+                background-color: var(--bodyBackground) !important;
+                filter: invert() !important;
             }
         }
         h2{
