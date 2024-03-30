@@ -1,37 +1,37 @@
 :root{
 
     /* ------------> Le background <-------------- */
-    --background: black;
-    --onBackground: white;
+    --background: #000000;
+    --onBackground: #ffffff;
     
     /* ------------> Le Body <-------------- */
-    --bodyBackground: white;
-    --onBodyBackground: black;
-    --headerBackground: rgba(0, 0, 0, 0.2);
+    --bodyBackground: #ffffff;
+    --onBodyBackground: #000000;
+    --headerBackground: #00000033;
 
     /* ------------> Le primary <-------------- */
-    --primary: rgb(2, 0, 60);
-    --on_primary: rgb(156, 212, 255);
-    --primary_border: rgb(0, 0, 255);
+    --primary: #02003c;
+    --on_primary: #9cd4ff;
+    --primary_border: #0000ff;
 
     /* ------------> Le secondary <-------------- */
-    --secondary: rgb(0, 89, 89);
-    --on_secondary: rgb(141, 255, 255);
-    --secondary_border: rgb(0, 255, 255);
+    --secondary: #005959;
+    --on_secondary: #8dffff;
+    --secondary_border: #00ffff;
 
     /* ------------> Le tertiary <-------------- */
-    --tertiary: rgb(0, 99, 0);
-    --on_tertiary: rgb(196, 255, 196); 
-    --tertiary_border: rgb(0, 255, 0);
+    --tertiary: #006300;
+    --on_tertiary: #c4ffc4; 
+    --tertiary_border: #00ff00;
 
     /* ------------> Error <-------------- */
-    --error: rgb(62, 9, 9);
-    --on_error: rgb(255, 69, 69);
-    --error_border: rgb(255, 0, 0);
+    --error: #3e0909;
+    --on_error: #ff4545;
+    --error_border: #ff0000;
 
     /* ------------> Success <-------------- */
-    --success: rgb(18, 53, 14);
-    --on_success: lime;
-    --success_border: green;
+    --success: #12350e;
+    --on_success: #00ff00;
+    --success_border: #008000;
 
 }

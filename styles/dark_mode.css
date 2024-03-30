@@ -5,33 +5,33 @@
     --onBackground: #000000;
 
     /* ------------> Le Body Background <-------------- */
-    --bodyBackground: rgb(0, 12, 31);
+    --bodyBackground: #000c1f;
     --onBodyBackground: #ffffff;
-    --headerBackground: rgba(255, 255, 255, 0.1);
+    --headerBackground: #ffffff1a;
 
     /* ------------> Le primary <-------------- */
-    --primary: rgb(41, 16, 63);
-    --on_primary: rgb(219, 181, 255);
-    --primary_border: rgb(131, 0, 253);
+    --primary: #29103f;
+    --on_primary: #dbb5ff;
+    --primary_border: #8300fd;
 
     /* ------------> Le secondary <-------------- */
-    --secondary: rgb(55, 65, 0);
-    --on_secondary: rgb(255, 249, 131);
-    --secondary_border: rgb(255, 255, 0);
+    --secondary: #374100;
+    --on_secondary: #fff983;
+    --secondary_border: #ffff00;
 
     /* ------------> Le tertiary <-------------- */
-    --tertiary: rgb(186, 233, 255);
-    --on_tertiary: rgb(0, 50, 56); 
-    --tertiary_border: rgb(0, 139, 139);
+    --tertiary: #bae9ff;
+    --on_tertiary: #003238; 
+    --tertiary_border: #008b8b;
 
     /* ------------> Error <-------------- */
-    --error: rgb(62, 9, 9);
-    --on_error: rgb(255, 57, 57);
-    --error_border: rgb(101, 0, 0);
+    --error: #3e0909;
+    --on_error: #ff3939;
+    --error_border: #650000;
 
     /* ------------> Success <-------------- */
-    --success: rgb(18, 53, 14);
-    --on_success: rgb(0, 255, 0);
-    --success_border: rgb(0, 255, 0);
+    --success: #12350e;
+    --on_success: #00ff00;
+    --success_border: #00ff00;
 
 }
