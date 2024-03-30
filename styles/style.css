@@ -54,6 +54,7 @@ body{
     font-size: 10vw;
     will-change: contents, opacity, display;
     transition: all 0.3s linear;
+    z-index: 100 !important;
 }
 
 #loading > article{
