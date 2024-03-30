@@ -1,0 +1,71 @@
+.light{
+    /* ------------> Le background <-------------- */
+    --background: #000000;
+    --onBackground: #ffffff;
+    
+    /* ------------> Le Body <-------------- */
+    --bodyBackground: #ffffff;
+    --onBodyBackground: #000000;
+    --headerBackground: #00000033;
+
+    /* ------------> Le primary <-------------- */
+    --primary: #02003c;
+    --on_primary: #9cd4ff;
+    --primary_border: #0000ff;
+
+    /* ------------> Le secondary <-------------- */
+    --secondary: #005959;
+    --on_secondary: #8dffff;
+    --secondary_border: #00ffff;
+
+    /* ------------> Le tertiary <-------------- */
+    --tertiary: #006300;
+    --on_tertiary: #c4ffc4; 
+    --tertiary_border: #00ff00;
+
+    /* ------------> Error <-------------- */
+    --error: #3e0909;
+    --on_error: #ff4545;
+    --error_border: #ff0000;
+
+    /* ------------> Success <-------------- */
+    --success: #12350e;
+    --on_success: #00ff00;
+    --success_border: #008000;
+}
+
+.dark{
+    /* ------------> Le Background <-------------- */
+    --background: #ffffff;
+    --onBackground: #000000;
+
+    /* ------------> Le Body Background <-------------- */
+    --bodyBackground: #000c1f;
+    --onBodyBackground: #ffffff;
+    --headerBackground: #ffffff1a;
+
+    /* ------------> Le primary <-------------- */
+    --primary: #29103f;
+    --on_primary: #dbb5ff;
+    --primary_border: #8300fd;
+
+    /* ------------> Le secondary <-------------- */
+    --secondary: #374100;
+    --on_secondary: #fff983;
+    --secondary_border: #ffff00;
+
+    /* ------------> Le tertiary <-------------- */
+    --tertiary: #bae9ff;
+    --on_tertiary: #003238; 
+    --tertiary_border: #008b8b;
+
+    /* ------------> Error <-------------- */
+    --error: #3e0909;
+    --on_error: #ff3939;
+    --error_border: #650000;
+
+    /* ------------> Success <-------------- */
+    --success: #12350e;
+    --on_success: #00ff00;
+    --success_border: #00ff00;
+}

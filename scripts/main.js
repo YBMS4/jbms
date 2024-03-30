@@ -6,7 +6,7 @@ window.addEventListener("load", ()=>{
 
         animationIntervale = setInterval(()=>{
             if(i == 0){
-                articles[i].classList.add("highlight")
+                articles[i].classList.add("highlight");
                 if(articles[2].classList.contains("highlight")) articles[2].classList.remove("highlight");
             }else{
                 articles[i].classList.add("highlight");
@@ -41,7 +41,7 @@ window.addEventListener("load", ()=>{
                     if(!entry.target.classList.contains("visible")) entry.target.classList.add("visible");
                 }else{
                     if(entry.target.classList.contains("visible")) entry.target.classList.remove("visible");
-                }
+                };
             });
         }, {"rootMargin": "0% 0px -25% 0px"});
 
@@ -51,7 +51,7 @@ window.addEventListener("load", ()=>{
                     animateCompetences_articles();
                 }else{
                     stopCompetences_animation();
-                }
+                };
             });
         }, {"rootMargin": "0% 0px -25% 0px"});
 
@@ -61,7 +61,7 @@ window.addEventListener("load", ()=>{
                     if(!entry.target.classList.contains("visible")) entry.target.classList.add("visible");
                 }else{
                     if(entry.target.classList.contains("visible")) entry.target.classList.remove("visible");
-                }
+                };
             });
         }, {"rootMargin": "0px 0px 0px 0px"});
 

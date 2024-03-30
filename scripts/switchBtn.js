@@ -6,12 +6,12 @@ function switchBtn_control(actions = {"onActive": ()=>{}, "onDisabled": ()=>{}})
         if(!switchBtn.classList.contains("switched")){
             switchBtn.classList.add("switched");
             switchBtn.dataset["active"] = true;
-            if(typeof actions["onActive"] == "function") actions["onActive"]()
+            if(typeof actions["onActive"] == "function") actions["onActive"]();
         }
         else{
             switchBtn.classList.remove("switched");
             switchBtn.dataset["active"] = false;
-            if(typeof actions["onDisabled"] == "function") actions["onDisabled"]()
+            if(typeof actions["onDisabled"] == "function") actions["onDisabled"]();
         };
     }); 
 };

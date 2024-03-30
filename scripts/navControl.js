@@ -21,7 +21,7 @@ window.addEventListener("load", ()=>{
                 if(!nav.classList.contains("close")) nav.classList.add("close");
                 nav.style.width = nav_btn.clientWidth + "px";
                 nav.style.height = nav_btn.clientHeight + "px";
-            }
+            };
         });
     
         const header = document.querySelector("header");
@@ -58,8 +58,8 @@ window.addEventListener("load", ()=>{
                         if(entry.target.id === id){
                             if(!link.classList.contains("current")) link.classList.add("current");
                         }else{
-                            if(link.classList.contains("current")) link.classList.remove("current")
-                        }
+                            if(link.classList.contains("current")) link.classList.remove("current");
+                        };
                     });
                 }else if(entry.target.id === "header"){
                     links.forEach((link)=>{
@@ -86,4 +86,4 @@ window.addEventListener("load", ()=>{
 
         header_observer.observe(header);
     }();
-})
+});

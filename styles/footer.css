@@ -31,17 +31,17 @@ body > footer{
         box-sizing: border-box;
         will-change: width, contents;
         transition: all 0.3s ease;
-    }
+    };
 
-    &.visible, &:hover{
+    &.visible{
 
         h2{
             width: 100%;
-        }
+        };
         article{
             opacity: 1 !important;
-        }
-    }
+        };
+    };
 }
 
 #references > article{
@@ -59,18 +59,22 @@ body > footer{
 
     h3{
         font-weight: bold;
-    }
+    };
+
     h4{
         font-weight: bold;
         padding-inline: 2vw;
-    }
+    };
+
     h5{
         font-weight: bold;
         padding-inline: 2vw;
-    }
+    };
+
     span{
         font-weight: normal;
-    }
+    };
+
 }
 
 
@@ -86,13 +90,13 @@ body > footer{
     svg{
         width: 2vw;
         fill: var(--on_primary);
-    }
+    };
 
     &.visible{
         a{
             transform: rotate(0deg) scale(1) !important;
-        }
-    }
+        };
+    };
 }
 #contacts > a{
     display: grid;
