@@ -1,7 +1,7 @@
 window.addEventListener("load", ()=>{
     !function navControl(){
         const nav = document.querySelector('body > nav');
-        const nav_btn = nav.querySelector("& > button");
+        const nav_btn = document.querySelector("body > nav > button");
     
         nav.style.width = nav_btn.clientWidth + "px";
         nav.style.height = nav_btn.clientHeight + "px";
@@ -24,9 +24,9 @@ window.addEventListener("load", ()=>{
             };
         });
     
-        const header = document.querySelector("header");
-        const main = document.querySelector("main");
-        const footer = document.querySelector("footer");
+        const header = document.querySelector("body > header");
+        const main = document.querySelector("body > main");
+        const footer = document.querySelector("body > footer");
         
         [header, footer, main, ...nav.querySelectorAll("a")].forEach(element => {
             element.addEventListener("click", () => {

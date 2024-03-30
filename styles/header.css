@@ -155,7 +155,7 @@ body > header > aside > button::before{
     transform: rotate(-45deg);
 }
 
-body > header > aside > button:hover::before,body > header > aside > button:hover::after{
+body > header > aside > button:hover::before, body > header > aside > button:hover::after{
     background-color: var(--on_error);
 }
 
