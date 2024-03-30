@@ -1,5 +1,5 @@
 window.addEventListener("load",()=>{
-    const theme = JSON.parse(document.cookie.split(";")[0])["theme"] || null;
+    const theme = document.cookie.length > 0 ? JSON.parse(document.cookie.split(";")[0])["theme"] : null;
     if(theme){
         changeTheme(theme);
         if(theme == "dark"){
