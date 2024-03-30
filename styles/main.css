@@ -304,7 +304,7 @@ body > main > section h2{
         border-bottom: thick solid var(--primary_border);
 
         b{
-            font-size: 0.5em;
+            font-size: 0.8em;
             font-family: consolas, Arial, Helvetica, sans-serif;
         }
     }
