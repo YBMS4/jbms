@@ -26,8 +26,8 @@ window.addEventListener("load",()=>{
 
 function changeTheme(mode, setCookies = false){
     const theme_link = document.querySelector("#theme");
-    const lightMode = "../styles/light_mode.css";
-    const darkMode = "../styles/dark_mode.css";
+    const lightMode = "styles/light_mode.css";
+    const darkMode = "styles/dark_mode.css";
     if(String(mode).toLocaleLowerCase() == "light"){
         theme_link.href = lightMode;
     }else if(String(mode).toLocaleLowerCase() == "dark"){
